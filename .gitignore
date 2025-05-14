@@ -1,0 +1,6 @@
+# Tex leftovers
+*.aux
+*.log
+
+# Local release dir
+.release/*
