@@ -142,8 +142,8 @@
 - `\upbubble{<tex-file>}{<title>}` - embed another `<tex-file>` inside the current one, prefixed with `\clearpage` and `<title>`
 - `\rebubble[<title>]{<fountain-file>}` - convert `<fountain-file>` to Bubbler and embed output, optionally prefixed with `\clearpage` and `<title>`
     - Alternatively, directly with Lua:
-      `bubbler.lua <source-fountain> <destination-tex>` (`bubbler.lua foo.fountain bar.tex`)
-      `bubbler.lua <source-destination>` (`bubbler.lua foo`)
+      `bubbler.lua <source-fountain> <destination-tex>` (`bubbler.lua foo.fountain bar.tex`, i.e. `foo.fountain` to `bar.tex`)
+      `bubbler.lua <source-destination>` (`bubbler.lua foo`, i.e. `foo.founatin` to `foo.tex`)
 - `\clearmem` - reset character context for `\dumpmem`
 - `\dumpmem[<title>]` - print out list of characters in current character context (since start of script or since last `\clearmem`), optionally prefixed with `\clearpage` and `<title>`
 
