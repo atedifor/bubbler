@@ -19,7 +19,7 @@
 
 
 -- VARIABLE INITIALIZATION
-_bubbler_version = '1.0 May 2025'
+_bubbler_version = '1.1 May 2025'
 _bubbler_file_author = 'Eduard "Eddie" Forejt // [at]EdiFor'
 
 _chars = 0

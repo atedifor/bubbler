@@ -24,7 +24,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{bubbler}
 
-\newcommand{\bubblerversion}{1.0 May 2025}
+\newcommand{\bubblerversion}{1.1 May 2025}
 \newcommand{\bubblerfileauthor}{Eduard "Eddie" Forejt // [at]EdiFor}
 
 \newlinechar=`\^^J
