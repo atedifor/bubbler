@@ -24,7 +24,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{bubbler}
 
-\newcommand{\bubblerversion}{1.0 May 2025}
+\newcommand{\bubblerversion}{1.1 May 2025}
 \newcommand{\bubblerfileauthor}{Eduard "Eddie" Forejt // [at]EdiFor}
 
 \newlinechar=`\^^J
@@ -268,29 +268,37 @@
 \ifthenelse{\equal{#3}{-1}}{}{\directlua{require("bubbler").printstats(#1, #2, #3)}}}
 
 %% Merges another script into the current one, skipping until \begin{script} && \contop
-\NewDocumentCommand{\upbubble}{ m m }{%
-\cseg{#2}
+\NewDocumentCommand{\upbubble}{ O{} m }{%
+\ifthenelse{\isempty{#1}}{\directlua{require("bubbler").upbubble("#2")}}{\ifthenelse{\equal{#1}{.}}{%
+\clearpage
 
-\directlua{require("bubbler").upbubble("#1")}}
+\directlua{require("bubbler").upbubble("#2")}}{%
+\cseg{#1}
+
+\directlua{require("bubbler").upbubble("#2")}}}}
 
 %% Import .fountain file as inline
 \NewDocumentCommand{\rebubble}{ O{} m }{%
-\ifthenelse{\isempty{#1}}{\directlua{require("bubbler").rebubble("#2")}}{%
+\ifthenelse{\isempty{#1}}{\directlua{require("bubbler").rebubble("#2")}}{\ifthenelse{\equal{#1}{.}}{%
+\clearpage
+
+\directlua{require("bubbler").rebubble("#2")}}{%
 \cseg{#1}
 
-\directlua{reguire("bubbler").rebubble("#2")}}}
+\directlua{require("bubbler").rebubble("#2")}}}}
 
 %% Clear current character context
 \NewDocumentCommand{\clearmem}{}{\directlua{reguire("bubbler").memclear()}}
 
 %% Make list of characters in current context
 \NewDocumentCommand{\dumpmem}{ O{} }{%
-\ifthenelse{\isempty{#1}}{%
+\ifthenelse{\isempty{#1}}{\directlua{require("bubbler").memdump()}}{\ifthenelse{\equal{#1}{.}}{%
 \clearpage
+
 \directlua{require("bubbler").memdump()}}{%
 \cseg{#1}
 
-\directlua{require("bubbler").memdump()}}}
+\directlua{require("bubbler").memdump()}}}}
 
 
 %%%%%%%%%%%%%%%

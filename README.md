@@ -18,7 +18,7 @@
     <a href="#faq">FAQ</a>
 </p>
 
-![Screenshot](APP.webp)
+<a href="Brick-Steel/Brick-Steel.pdf"><img src="APP.webp" alt="Screenshot"></a>
 
 ## Installation
 
@@ -95,7 +95,7 @@
       ```tex
       This is a paragraph I wrote.
 
-      \upbubble{%
+      \joinup{%
       Here is another paragraph that I'd like to join with the one above.\br
       And one more.}
       ```
@@ -138,12 +138,13 @@
 - `\music{<name>}` - attach `<name>` to `\scene` above it
 
 ### Tools
+*Optional instances of `\clearpage` below can be forced by using a single period (`.`) as the optional `<title>`.*
 
-- `\upbubble{<tex-file>}{<title>}` - embed another `<tex-file>` inside the current one, prefixed with `\clearpage` and `<title>`
+- `\upbubble[<title>]{<tex-file>}` - embed another `<tex-file>` inside the current one, optionally prefixed with `\clearpage` and `<title>`
 - `\rebubble[<title>]{<fountain-file>}` - convert `<fountain-file>` to Bubbler and embed output, optionally prefixed with `\clearpage` and `<title>`
     - Alternatively, directly with Lua:
-      `bubbler.lua <source-fountain> <destination-tex>` (`bubbler.lua foo.fountain bar.tex`)
-      `bubbler.lua <source-destination>` (`bubbler.lua foo`)
+      `bubbler.lua <source-fountain> <destination-tex>` (`bubbler.lua foo.fountain bar.tex`, i.e. `foo.fountain` to `bar.tex`)
+      `bubbler.lua <source-destination>` (`bubbler.lua foo`, i.e. `foo.founatin` to `foo.tex`)
 - `\clearmem` - reset character context for `\dumpmem`
 - `\dumpmem[<title>]` - print out list of characters in current character context (since start of script or since last `\clearmem`), optionally prefixed with `\clearpage` and `<title>`
 

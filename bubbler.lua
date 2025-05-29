@@ -19,7 +19,7 @@
 
 
 -- VARIABLE INITIALIZATION
-_bubbler_version = '1.0 May 2025'
+_bubbler_version = '1.1 May 2025'
 _bubbler_file_author = 'Eduard "Eddie" Forejt // [at]EdiFor'
 
 _chars = 0
@@ -186,16 +186,25 @@ local function _up_bubble(scr)
     local ls = f:lines()
 
     local p = false
+    local w = false
     for l in ls do
-        if string.find(l, "\\begin{script}") then
+        if p then
+            if string.find(l, "\\upbubble") then
+                if not w then
+                    print("\nWARN: Upbubble recursion not allowed.")
+                    w = true
+                end
+            else
+                tex.print(l)
+            end
+        elseif string.find(l, "\\contop") then
             p = true
         elseif string.find(l, "\\end{script}") then
+            if not p then
+                print("\nWARN: Top of content not found, nothing to upbubble.")
+            end
             p = false
             break
-        elseif p then
-			if not string.find(l, "\\upbubble") and not string.find(l, "\\contop") then
-				tex.print(l)
-			end
         end
     end
 
