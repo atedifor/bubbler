@@ -138,8 +138,9 @@
 - `\music{<name>}` - attach `<name>` to `\scene` above it
 
 ### Tools
+*Optional instances of `\clearpage` below can be forced by using a single period (`.`) as the optional `<title>`.*
 
-- `\upbubble{<tex-file>}{<title>}` - embed another `<tex-file>` inside the current one, prefixed with `\clearpage` and `<title>`
+- `\upbubble[<title>]{<tex-file>}` - embed another `<tex-file>` inside the current one, optionally prefixed with `\clearpage` and `<title>`
 - `\rebubble[<title>]{<fountain-file>}` - convert `<fountain-file>` to Bubbler and embed output, optionally prefixed with `\clearpage` and `<title>`
     - Alternatively, directly with Lua:
       `bubbler.lua <source-fountain> <destination-tex>` (`bubbler.lua foo.fountain bar.tex`, i.e. `foo.fountain` to `bar.tex`)
