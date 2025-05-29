@@ -95,7 +95,7 @@
       ```tex
       This is a paragraph I wrote.
 
-      \upbubble{%
+      \joinup{%
       Here is another paragraph that I'd like to join with the one above.\br
       And one more.}
       ```
