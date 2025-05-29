@@ -18,7 +18,7 @@
     <a href="#faq">FAQ</a>
 </p>
 
-![Screenshot](APP.webp)
+<a href="Brick-Steel/Brick-Steel.pdf"><img src="APP.webp" alt="Screenshot"></a>
 
 ## Installation
 
