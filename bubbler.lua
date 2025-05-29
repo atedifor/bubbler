@@ -188,7 +188,13 @@ local function _up_bubble(scr)
     local p = false
     local w = false
     for l in ls do
-        if p then
+        if string.find(l, "\\end{script}") then
+            if not p then
+                print("\nWARN: Top of content not found, nothing to upbubble.")
+            end
+            p = false
+            break
+        elseif p then
             if string.find(l, "\\upbubble") then
                 if not w then
                     print("\nWARN: Upbubble recursion not allowed.")
@@ -199,12 +205,6 @@ local function _up_bubble(scr)
             end
         elseif string.find(l, "\\contop") then
             p = true
-        elseif string.find(l, "\\end{script}") then
-            if not p then
-                print("\nWARN: Top of content not found, nothing to upbubble.")
-            end
-            p = false
-            break
         end
     end
 
