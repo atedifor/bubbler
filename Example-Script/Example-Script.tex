@@ -1,0 +1,429 @@
+\documentclass{bubbler}
+
+\renewcommand{\bubblertitle}{%
+\unbubskip
+\bol{Alice} and \bol{Bob}\br
+talk about\br
+the brand new\br
+\uli{\bol{BUBBLER}}
+\rebubskip}
+\renewcommand{\bubblercredit}{Created by}
+\renewcommand{\bubblerauthor}{Eduard "Eddie" Forejt}
+\renewcommand{\bubblersource}{\ita{Based on Fountain}}
+\renewcommand{\bubblerrevision}{1.0}
+\renewcommand{\bubblerdate}{May 2025}
+\renewcommand{\bubblercopyright}{\cczero~atEdiFor}
+
+\begin{document}
+\begin{script}
+
+\contop
+
+\seg{ACT I - PREPARATIONS}
+
+\scene[INT][]{ROSE CAFE}
+
+Alice and Bob are sitting in a café. Bob is showing Alice the script he wrote on his computer.
+
+\conv[][]{ALICE}{%
+Woah, your script's so cool, Bob!}
+
+\conv[][]{BOB}{%
+Thanks, Alice.\br
+Now that I've found a software that I can work with, writing's been a breeze.}
+
+\conv[][]{ALICE}{%
+What's it called?}
+
+\conv[][]{BOB}{%
+It's called Bubbler, it's a brand-new document class for LuaLaTeX based on Fountain.}
+
+\conv[][]{ALICE}{%
+I know Fountain, I've used it before. It has a more markdown-y feel to it, right?}
+
+\conv[][]{BOB}{%
+Yeah, TeX might seem more advanced compared to it, but with Bubbler it's not that hard.}
+
+Alice leans closer to Bob's computer.
+
+\conv[][]{ALICE}{%
+Really? Can you show me?}
+
+Bob nods.
+
+\conv[][]{BOB}{%
+Of course.}
+
+\clearpage
+
+\seg{ACT II - THE TITLE PAGE \& FORMATTING}
+
+A waitress brings Bob and Alice their coffe.
+
+\conv[][]{WAITRESS}{%
+Here you go.}
+
+Alice and Bob thank her and the waitress silently leaves.
+
+\conv[][]{ALICE}{%
+Let's see here. This title page for example, that must have been pretty hard to set up.}
+
+\conv[][]{BOB}{%
+Not at all. It's just the matter of figuring out what you want to place where. Bubbler comes with a lot of options by default, most of them inspired by Better Fountain. Then it's just a matter of using\br
+\bol{\textbackslash renewcommand\{\textbackslash bubblertitle\}\{etc.\}}\br
+You would replace\br
+\bol{\textbackslash bubblertitle}\br
+with the space you want to use and\br
+\bol{etc.}\br
+with the text you want to show in it.}
+
+\conv[][]{ALICE}{%
+But, if there are so many spaces, how can you remember them all?}
+
+\conv[][]{BOB}{%
+Well, I could check the code or the documentation but I don't really have to. With Bubbler, it's just a matter of using\br
+\bol{\textbackslash titlehelp}\br
+and all the spaces appear with their corresponding names.}
+
+\conv[][]{ALICE}{%
+That's neat.}
+
+Bob takes a sip of his coffee.
+
+\conv[][]{BOB}{%
+It is.}
+
+\conv[][]{ALICE}{%
+But what if I don't want a title page because my script is still a prototype or doesn't have a name yet.}
+
+\conv[][]{BOB}{%
+Bubbler's ready for that too, you would just put\br
+\bol{\textbackslash skiptitle}\br
+in the preamble and the title page will not appear in the resulting script.}
+
+\conv[][]{ALICE}{%
+How about the formatting, the bold and italic fonts?}
+
+\conv[][]{BOB}{%
+For \bol{bold} text, you simply wrap it in\br
+\bol{\textbackslash bol\{text\}}\br
+For \ita{italics}, you use\br
+\bol{\textbackslash ita\{text\}}\br
+If you want \bolita{both}, you use\br
+\bol{\textbackslash bolita\{text\}}\br
+For \uli{underlined} text, it's\br
+\bol{\textbackslash uli\{text\}}}
+
+Alice smiles and nods.
+
+\conv[][]{BOB}{%
+Anything else?}
+
+\conv[][]{ALICE}{%
+How about forcibly-splitting paragraphs. If I recall correctly, it's really wrong to do it in TeX but I use it all the time in my scripts, for emphasis and such.}
+
+\conv[][]{BOB}{%
+Bubbler's got you covered. It still uses paragraphs, it just temporarily shrinks the space between them. You can either write a regular paragraph with a space after it and then use\br
+\bol{\textbackslash joinup\{text\textbackslash br more text\}}\br
+to, well, join it up to the paragraph. You don't use more paragraphs in this though, you replace them with\br
+\bol{\textbackslash br}}
+
+Alice listens while bringing up her own tablet.
+
+\conv[][]{ALICE}{%
+Alright, and looking at the code of Bubbler, you can also do it manually by using\br
+\bol{\textbackslash unbubskip}\br
+before the paragraph and\br
+\bol{\textbackslash rebubskip}\br
+after it ends.}
+
+Bob nods.
+
+\conv[][]{BOB}{%
+Simple, right?}
+
+\cut{CUT TO:}
+
+\clearpage
+
+\seg{ACT III - PAGE FORMAT \& CONTENTS}
+
+\scene[EXT][]{BEFORE ROSE CAFE}
+
+Bob and Alice are holding to-go cups and their respective digital divices.
+
+\conv[][annoyed]{ALICE}{%
+That's nice and all, but we still haven't talked about the script yet.}
+
+\conv[][]{BOB}{%
+Sorry, about that, but we might need to make one more detour before we can start working on our script.}
+
+Alice sighs.
+
+\conv[][]{ALICE}{%
+Alright.}
+
+\conv[][]{BOB}{%
+I already told you that Bubbler works based on LuaLaTeX, which in turn is based upon LaTeX.}
+
+\conv[][]{ALICE}{%
+Yes? Which means?}
+
+\conv[][]{BOB}{%
+That we need to do some things before we start writing. First we need to start the document environment with\br
+\bol{\textbackslash begin\{document\}}\br
+and then inside it we start the script environment\br
+\bol{\textbackslash begin\{script\}}\br
+This prepares the title page and sets up some things for later.}
+
+Alice murmurs aggreingly.
+
+\conv[][]{BOB}{%
+It's also a good idea to put\br
+\bol{\textbackslash contop}\br
+right before the start of the script's contents, as it's also used by things later on.}
+
+\conv[][]{ALICE}{%
+Is that all?}
+
+\cut{FADE TO:}
+
+\clearpage
+
+\seg{ACT IV - SCRIPT WRITING}
+
+\scene[EXT][]{PARK}
+
+Alice and Bob walk into the nearby park.
+
+\conv[][]{PASSERBY}{%
+Hi, Alice.\br
+Hello, Bob.}
+
+They wave in answer and sit down on a bench.
+
+\conv[][]{ALICE}{%
+Come on, Bob, I want to get to writing.}
+
+Bob chuckles.
+
+\conv[][]{BOB}{%
+Of course.\br
+You already saw some of the formatting in my script, but let's take a closer look at how we get things to work.}
+
+Bob opens his laptop again.
+
+\conv[][]{BOB}{%
+You already saw the conversation, you make these like this\br
+\bol{\textbackslash conv[type][method]\{name\}\{text\}}\br
+Name and text are the required arguments, name is for the character and text is where you put the speech.\br
+You can leave out type and method if you want. Type is written after the character's name, it's usually something like O.S. for off-screen. Method is written under the name and serves as a way of telling how their voice or emotion should sound.}
+
+\conv[][]{ALICE}{%
+Sure, I know that. And I'm reading here that if you want to include an action in the conversation, you use\br
+\bol{\textbackslash inconv\{action\}}}
+
+\conv[][]{BOB}{%
+You sure do.}
+
+\dia{%
+\diaconv[][]{ALICE}{%
+Can you also do-}}{%
+\diaconv[][]{BOB}{%
+What about-}}
+
+Alice and Bob laugh.
+
+\conv[][]{BOB}{%
+Sorry, you first.}
+
+\conv[][]{ALICE}{%
+Just wanted to ask if you can make two people talk at the same time but I've already figured it out.}
+
+\conv[][]{BOB}{%
+Yep, you use\br
+\bol{\textbackslash dia\{\textbackslash diaconv\}\{\textbackslash diaconv\}}\br
+where\br
+\bol{\textbackslash diaconv}\br
+works the same as regular conv, it's just prepared to fit inside the dialogue.}
+
+\conv[][]{ALICE}{%
+And you wanted to say?}
+
+Bob looks up from his laptop.
+
+\conv[][]{BOB}{%
+What-\br
+\inconv{pause, thinking}\br
+Oh, right, scenes.}
+
+\conv[][]{ALICE}{%
+Yeah, you need those.}
+
+\conv[][]{BOB}{%
+It's quite simple as well.}
+
+\conv[][quietly]{ALICE}{%
+You say that about everything.}
+
+\conv[][]{BOB}{%
+Because it's true!\br
+Scenes are made like this\br
+\bol{\textbackslash scene[int/ext][daytime]\{name\}}}
+
+\conv[][]{ALICE}{%
+Let me guess, name is required while int/ext and daytime are optional.}
+
+\conv[][]{BOB}{%
+That's right, one important thing to note though is that they use special formatting.\br
+Int/ext is suffixed with a period (.), which you don't need to include, and should write int/ext in a way that suits this.\br
+On the other hand, daytime is prefixed with a dash (-).}
+
+\conv[][]{ALICE}{%
+And cuts are written as\br
+\bol{\textbackslash cut\{CUT TO:\}}\br
+and here you do need to put in the colon (:) as it isn't put in automatically.}
+
+\conv[][]{BOB}{%
+Last, but not least is music. For now, it's mostly just an alias for \ita{italics}, but it's still recommended to use the specific macros in case that changes in the future. The macros are\br
+\bol{\textbackslash lyric\{singing goes here\}}\br
+for a character singing inside their conversation block and\br
+\bol{\textbackslash music\{track name\}}\br
+for scene music.}
+
+Alice slides a finger across her tablet's surface, reading through the Bubbler documentation available on its GitHub page.
+
+\conv[][]{ALICE}{%
+And finally you can do segments with\br
+\bol{\textbackslash seg\{name\}}\br
+and if you want to also put it on a new page you can use\br
+\bol{\textbackslash cseg\{name\}}}
+
+\conv[][]{BOB}{%
+You can also center any other text by using\br
+\bol{\textbackslash encen\{text\}}}
+
+With the sky turning dark, Alice and Bob leave the park to walk home.
+
+\cut{> CUT TO:}
+
+\clearpage
+
+\seg{ACT V - TOOLS}
+
+\scene[EXT][NIGHT]{STREETS}
+
+Alice is walking ahead of Bob, excited to write her script.
+
+\conv[O.S.][]{BOB }{%
+Wait for me!}
+
+\conv[][excited]{ALICE}{%
+Sorry, Bob, I'm just so looking forward to getting home and starting to write.}
+
+Bob finally catches up to Alice.
+
+\conv[][with heavy breath]{BOB}{%
+Yeah, that's great, but there's still couple more things to tell you.}
+
+Alice turns to Bob.
+
+\conv[][]{ALICE}{%
+Right, I meant to ask you. I'm actually writing a script that has to comply with the Oscar standards and I noticed that Bubble uses scene numbering and bold scene names, which are both against those standards. What-}
+
+Bob cuts her off.
+
+\conv[][]{BOB}{%
+If you need to conform to Oscar standards, you just put\br
+\bol{\textbackslash oscarstyle}\br
+into your script's preamble. You would then also use\br
+\bol{\textbackslash noscenenumber}\br
+for scenes without numbers and\br
+\bol{\textbackslash noboldscene}\br
+for scenes with regular-weight names.}
+
+Alice nods.
+
+\conv[][]{ALICE}{%
+Thanks. What else is there to tell?}
+
+Bob smiles.
+
+\conv[][]{BOB}{%
+Bubbler also comes with couple tools that you can use to make your life easier.\br
+First there is upbubble,\br
+\bol{\textbackslash upbubble\{file.tex\}\{title\}}\br
+which allows you to embed one script in Bubbler from\br
+\bol{\textbackslash contop}\br
+to\br
+\bol{\textbackslash end\{script\}}\br
+in another script.}
+
+Alice is looking through the documentation, trying to find the part about tools.
+
+\conv[][]{ALICE}{%
+Here it is!\br
+\inconv{pauses, reading*}\br
+Seems like it can also automatically convert a Fountain file to Bubbler/TeX either with\br
+\bol{\textbackslash rebubble[optional title]\{file.fountain\}}\br
+or by using the attached Lua file like this\br
+\bol{bubbler.lua source.fountain destination.tex}}
+
+\conv[][]{EDDIE}{%
+That's how I'm making this script!}
+
+A random Eddie disappears as quickly as they appeared. Alice and Bob shrug, continuing to walk down the road.
+
+\conv[][]{BOB}{%
+You sure can. The next thing you can do is get a list of characters\br
+\bol{\textbackslash dumpmem[optional title]}\br
+which also resets the context or you can do that manually with\br
+\bol{\textbackslash clearmem}\br
+See? Like this.}
+
+\clearpage
+
+This part has to be added in TeX.
+
+\clearpage
+
+\conv[][]{ALICE}{%
+Cool.}
+
+\conv[][]{BOB}{%
+But it has to be after the section from where you want to get the characters. Only after, not before.}
+
+Alice and Bob approach their apartment's door.
+
+\conv[][]{BOB}{%
+One last thing. Remember how I said that beginning the script environment will be important later on?}
+
+Alice nods.
+
+\conv[][]{BOB}{%
+Well, this is where it comes in. The beginning actually has three optional arguments.\br
+\bol{\textbackslash begin[character limit][scene limit][scene categories]\{script\}}\br
+This changes if and how detailed a statistics print-out will be.}
+
+\conv[][]{ALICE}{%
+A statistics print-out?}
+
+\conv[][]{BOB}{%
+Yes, at the end of the TeX output there can be a table of statistics, how much do scenes and characters appear in the script.\br
+It is disabled by default though but you can enable it and customize it using the code above.\br
+Character limit means how many of the top characters will be printed out.\br
+Same with scene limit, but for scenes.\br
+You can use -1 to print out all of them, respectively.\br
+Scene categories can be either set to 0 (false) or 1 (true), which disables/enables (respectively). And -1 to disable all statistics.}
+
+\cut{FADE OUT.}
+
+\begin{comment}
+
+Hi, you found me!
+I'm in your comment section, muhahah, and can do some evil stuff like
+\diaconv{\conv{}}{}
+
+\end{comment}
+\end{script}
+\end{document}
