@@ -6,19 +6,24 @@
     <br>
 </h1>
 
-<h4 align="center">A LuaLaTeX-friendly alternative to Fountain, the screenwriting language.</h4>
+<h4 align="center">A LuaLaTeX-friendly alternative to [Fountain](https://fountain.io/), the screenwriting language.</h4>
 
 <!-- <p align="center">
     <img src="https://img.shields.io/badge/Badge-black?style=for-the-badge">
 </p> -->
 
 <p align="center">
+    <a href="#about">About</a> |
     <a href="#installation">Installation</a> |
     <a href="#how-to-use">How To Use</a> |
     <a href="#faq">FAQ</a>
 </p>
 
 <a href="Brick-Steel/Brick-Steel.pdf"><img src="APP.webp" alt="Screenshot"></a>
+
+## About
+
+The **Bubbler** document class for LuaLaTeX supplies a variety of document commands (macros) that allow the user, you, to create a script in LuaLaTeX with a similar variety of options that Fountain supplies, from basic formatting (bold, italics, etc.) to fully-fledged out and Oscar-compliant blocks (conversations, actions, fade-outs, etc.). It also includes a Lua script that can be used for conversion from Fountain to Bubbler, for printing out a list of characters (after a scene or a block of scenes) and overall statistics of number of lines/scenes in the script, plus a function for embedding scripts in other scripts.
 
 ## Installation
 
