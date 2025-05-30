@@ -6,7 +6,7 @@
     <br>
 </h1>
 
-<h4 align="center">A LuaLaTeX-friendly alternative to Fountain, the screenwriting language.</h4>
+<h4 align="center">A LuaLaTeX-friendly alternative to [Fountain](https://fountain.io/), the screenwriting language.</h4>
 
 <!-- <p align="center">
     <img src="https://img.shields.io/badge/Badge-black?style=for-the-badge">
